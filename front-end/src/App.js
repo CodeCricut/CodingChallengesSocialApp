@@ -8,11 +8,21 @@ import CardBox from "./components/layout/CardBox";
 import Post from "./components/pages/Post";
 import AttemptBox from "./components/layout/AttemptBox";
 import Attempt from "./components/Attempt";
-
+import User from "./components/pages/User";
+import Register from "./components/pages/Register";
+import Login from "./components/pages/Login";
+import EditPost from "./components/pages/EditPost";
+import DeletePost from "./components/pages/DeletePost";
+import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
+import Help from "./components/pages/Help";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 function App() {
     return (
         <GlobalProvider>
             <Container maxWidth="md">
+                <Navbar />
                 <Switch>
                     <Route
                         exact
@@ -30,7 +40,28 @@ function App() {
                         path="/testing/attemptcomp"
                         component={Attempt}
                     />
+                    <Route
+                        exact
+                        path="/testing/editpost"
+                        component={EditPost}
+                    />
+                    <Route
+                        exact
+                        path="/testing/deletepost"
+                        component={DeletePost}
+                    />
+                    <Route exact path="/testing/footer" component={Footer} />
+                    <Route exact path="/testing/Navbar" component={Navbar} />
+
+                    <Route exact path="/user" component={User} />
+                    <Route exact path="/login" component={Login} />
+                    <Route exact path="/register" component={Register} />
+                    <Route exact path="/about" component={About} />
+                    <Route exact path="/contact" component={Contact} />
+                    <Route exact path="/help" component={Help} />
+                    <Route exact path="/create" component={EditPost} />
                     <Route exact path="/posts" component={Posts} />
+
                     {/* Catch all */}
                     <Route component={Posts} />
                     {/* <Route exact path="/featured">
@@ -70,6 +101,7 @@ function App() {
                         contact
                     </Route> */}
                 </Switch>
+                <Footer />
             </Container>
         </GlobalProvider>
     );

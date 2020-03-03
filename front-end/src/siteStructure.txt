@@ -5,11 +5,13 @@ SITE STRUCTURE:
 |   |
 |   +---+ layout
 |   |   |
-|   |   * GlobalProvider (Router, Redux Provider, ToastProvider, Global styles, etc.)                          X
+|   |   * GlobalProvider (Router, Redux Provider, ToastProvider, Global styles, etc.)                          XX
 |   |   |
 |   |   * CardBox (container for posts)                                                                        XX
 |   |   |
-|   |   * CommentBox (container for comment section)                                                           X
+|   |   * CommentBox (container for comment section)                                                           XX
+|   |   |
+|   |   * AttemptBox (container for attempt section)                                                           XX
 |   |
 |   +---+ hooks
 |   |   |
@@ -17,37 +19,30 @@ SITE STRUCTURE:
 |   |
 |   +---+ pages
 |   |   |
-|   |   * Posts
+|   |   * Posts                                                                                                XX
 |   |   |
-|   |   * Post
+|   |   * Post                                                                                                 XX
 |   |   |
-|   |   * EditPost (same as create)
+|   |   * EditPost (same as create)                                                                            XX
 |   |   |
-|   |   * DeletePost
+|   |   * DeletePost                                                                                           XX
 |   |   |
-|   |   * Users
+|   |   * User                                                                                                 XX
 |   |   |
-|   |   * User
+|   |   * Register                                                                                             XX                                                                                        
+|   |   | 
+|   |   * Login                                                                                                XX
 |   |   |
-|   |   * Register
+|   |   * About                                                                                                XX                   
 |   |   |
-|   |   * Login
+|   |   * Contact                                                                                              XX
 |   |   |
-|   |   * Logout
-|   |   |
-|   |   * About
-|   |   |
-|   |   * Contact
-|   |   |
-|   |   * Help
+|   |   * Help                                                                                                 XX
 |   |
-|   * Navbar
+|   * Navbar                                                                                                   XX
 |   |
-|   * Footer|
+|   * Footer                                                                                                   XX
 |
-|
-+---+ styles (Styles components through the material-ui HOC API)
-|   |
 |
 |
 +---+ actions (actions + action creators to be consumed by reducer)
@@ -77,9 +72,9 @@ SITE STRUCTURE:
 ENDPOINTS
 ---------
 
-/posts                  Recent posts
-/featured               Featured posts
-/:postId                View a post
+/posts                  Recent posts                                                                           XX
+/featured               Featured posts                                                                         
+/:postId                View a post                                                                            XX
 
 /users                  New users
 /user/:userName         User page
