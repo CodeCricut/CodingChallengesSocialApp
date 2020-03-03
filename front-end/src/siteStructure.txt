@@ -1,0 +1,96 @@
+SITE STRUCTURE:
+---------------
+
++---+ components
+|   |
+|   +---+ layout
+|   |   |
+|   |   * GlobalProvider (Router, Redux Provider, ToastProvider, Global styles, etc.)                          X
+|   |   |
+|   |   * CardBox (container for posts)                                                                        X
+|   |   |
+|   |   * CommentBox (container for comment section)                                                           X
+|   |
+|   +---+ hooks
+|   |   |
+|   |   * useForm
+|   |
+|   +---+ pages
+|   |   |
+|   |   * Posts
+|   |   |
+|   |   * Post
+|   |   |
+|   |   * EditPost (same as create)
+|   |   |
+|   |   * DeletePost
+|   |   |
+|   |   * Users
+|   |   |
+|   |   * User
+|   |   |
+|   |   * Register
+|   |   |
+|   |   * Login
+|   |   |
+|   |   * Logout
+|   |   |
+|   |   * About
+|   |   |
+|   |   * Contact
+|   |   |
+|   |   * Help
+|   |
+|   * Navbar
+|   |
+|   * Footer|
+|
+|
++---+ styles (Styles components through the material-ui HOC API)
+|   |
+|
+|
++---+ actions (actions + action creators to be consumed by reducer)
+|   |
+|   * api (communicates with backend)
+|   |
+|   * Post 
+|   |
+|   * Comment 
+|   |
+|   * User
+|   |
+|   * store (configure redux store)
+|
+|
+|
++---+ reducers (Manipulates redux store; does not make API calls)
+|   |
+|   * Post 
+|   |
+|   * Comment 
+|   |
+|   * User 
+|   |
+|   * index 
+
+ENDPOINTS
+---------
+
+/               Recent posts
+/featured       Featured posts
+/:postId        View a post
+
+/users          New users
+
+/register       Register as a new user
+/login          Login as an existing user
+/logout         Logout
+
+/create         Create a new post
+/edit/:postId   Edit existing post
+/delete/:postId Delete a post
+
+/about          Information about the site
+/help           Help information
+/contact        Contact information
