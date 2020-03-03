@@ -7,7 +7,7 @@ SITE STRUCTURE:
 |   |   |
 |   |   * GlobalProvider (Router, Redux Provider, ToastProvider, Global styles, etc.)                          X
 |   |   |
-|   |   * CardBox (container for posts)                                                                        X
+|   |   * CardBox (container for posts)                                                                        XX
 |   |   |
 |   |   * CommentBox (container for comment section)                                                           X
 |   |
@@ -77,20 +77,21 @@ SITE STRUCTURE:
 ENDPOINTS
 ---------
 
-/               Recent posts
-/featured       Featured posts
-/:postId        View a post
+/posts                  Recent posts
+/featured               Featured posts
+/:postId                View a post
 
-/users          New users
+/users                  New users
+/user/:userName         User page
 
-/register       Register as a new user
-/login          Login as an existing user
-/logout         Logout
+/register               Register as a new user
+/login                  Login as an existing user
+/logout                 Logout
 
-/create         Create a new post
-/edit/:postId   Edit existing post
-/delete/:postId Delete a post
+/create                 Create a new post
+/edit/:postId           Edit existing post
+/delete/:postId         Delete a post
 
-/about          Information about the site
-/help           Help information
-/contact        Contact information
+/about                  Information about the site
+/help                   Help information
+/contact                Contact information
